@@ -1,3 +1,6 @@
-# paper_review
+# Paper Reviews
 
-Review
+### Repository of shorthand paper reviews
+
+#### Template
+See ./template.md
