@@ -7,7 +7,7 @@
 review, (novel) method, (new) dataset, analysis, ... 
 
 ##### Domain
-Field(s)
+Single line of domains separated by comma.
 
 E.g. Biology, CS, Mathematics, ...
 
