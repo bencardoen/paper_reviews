@@ -4,9 +4,23 @@
 ##### Url
 
 ##### Type
-review, (novel) method, (new) dataset, analysis, 
+review, (novel) method, (new) dataset, analysis, ... 
+
+##### Domain
+Field(s)
+
+E.g. Biology, CS, Mathematics, ...
 
 ##### Keywords 
+key1, key2, key3, ...
+
+A single line of comma separated keywords. These are machine parsed to create a keyword tree where a paper is placed into folders named by their keyword.
+A single paper can appear in multiple folders (never copied, only the symbolic link will appear.)
+
+Example:
+__computer graphics, networks, graph analysis__
+
+ 
 
 
 ##### Cite
