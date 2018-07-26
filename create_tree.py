@@ -50,7 +50,7 @@ def writeTree(tree, root='tree', paperdir='papers'):
 
 
 def parseLine(line):
-    return [r.rstrip().lstrip().replace(' ', '_') for r in line.split(',')]
+    return [r.rstrip().lstrip().lower().replace(' ', '_') for r in line.split(',')]
 
 def main():
     writeTree(read_papers())

@@ -11,7 +11,7 @@ review
 #### Domain
 CS
 ##### Keywords 
-shape, geometry, computer graphics
+shape, geometry, computer graphics, graphics, translation
 
 ##### Cite
 e.g. BibLatex
