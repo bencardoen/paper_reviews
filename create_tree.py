@@ -1,61 +1,59 @@
-def read_papers(directory_name='./papers'):
-    # open directory
-    # for each paper
-    # scan domain
-    # scan keywords
-    # create tree
-    # per domain
-    # single node
-    # per keyword (under domain), leaf node
-    # leaf node is symbolic link to paper
-    tree = {}
-    import os
+import os
+from collections import defaultdict
+
+
+def read_papers(directory_name='papers'):
+    tree = defaultdict(lambda: defaultdict(list))
     for filename in os.listdir(directory_name):
         domains = []
         keywords = []
         dnext = False
         knext = False
-        with open(filename, 'r') as f:
+        with open(os.path.join(directory_name, filename), 'r') as f:
             l = f.readline()
-            if dnext:
-                domains = parseDomains(l)
-            if knext:
-                keywords = parseKeywords(l)
-                break
-            dnext = '##### Domain' in l
-            knext = '##### Keywords' in l
+            while l:
+                if dnext:
+                    domains = parseLine(l)
+                if knext:
+                    keywords = parseLine(l)
+                    break
+                dnext, knext = 'Domain' in l, 'Keywords' in l
+                l = f.readline()
         for d in domains:
-            if d in tree:
-                keys = tree[d]
-                for k in keywords:
-                    if k in keys:
-                        keys[k].append(filename)
-                    else:
-                        keys[k] = [filename]
-            else:
-                tree[d] = {k: filename for k in keywords}
+            for k in keywords:
+                tree[d][k].append(filename)
     return tree
 
 
-def writeTree(tree):
-    for d in tree:
-        # mkdir if not exists
-        for k, v in d.items():
-            # mk d/k subdir if not exists
-            # mk symbolic link
+def writeTree(tree, root='tree', paperdir='papers'):
+    try:
+        os.mkdir(root)
+    except FileExistsError as e:
+        pass
+    for domain, keywords in tree.items():
+        try:
+            os.mkdir(os.path.join(root, domain))
+        except FileExistsError as e:
             pass
+        for keyword, filenames in keywords.items():
+            try:
+                os.mkdir(os.path.join(root, domain, keyword))
+            except FileExistsError as e:
+                pass
+            for filename in filenames:
+                src = os.path.join(paperdir, filename)
+                trg = os.path.join(root, domain, keyword, filename)
+                try:
+                    os.link(src, trg)
+                except FileExistsError as e:
+                    pass
 
 
-def parseDomains(line):
-    return []
-
-
-def parseKeywords(line):
-    return []
-
+def parseLine(line):
+    return [r.rstrip().lstrip().replace(' ', '_') for r in line.split(',')]
 
 def main():
-    pass
+    writeTree(read_papers())
 
 
 if __name__ == '__main__':
