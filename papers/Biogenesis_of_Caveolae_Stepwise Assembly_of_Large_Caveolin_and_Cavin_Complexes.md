@@ -26,6 +26,7 @@ cavin, caveolin, complex, 80SCCC
 Describe interaction/complex formation caveolin / cavin
 
 #### Contribution
+* CV1 cell
 * Cav1 assembles in 8S complex at ER exit sites
 * Packages to Golgi, transformed
 * Binds with cholesterol, forms 70S complex
