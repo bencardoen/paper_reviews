@@ -1,5 +1,5 @@
 ## Title
-
+Architecture of the Caveolar Coat Complex
 ### MetaData
 ##### Url
 http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=PMC5004899
@@ -23,9 +23,11 @@ Architecture of Caveolae
 
 #### Contribution
 Outlines knowledge so far on Caveolae
+- Caveolae = inner cage of caveolin1 polyhedral, with outer cage aligned on edges (cavin1), 80SCCC
 
 #### Method
 ##### 80S Caveolar Coat Complex
+* Hela
 * 80S CCC
 * 2 part structure
 * Polyhedral structure of polygons of caveolin 1
@@ -44,16 +46,16 @@ Outlines knowledge so far on Caveolae
 * Striations are the alignments of PTRF/Cav1 along the edges
 
 #### Related Work
-Place work in field
+
 
 #### Data
-Describe dataset (for reviews, covered literature)
+
 
 #### Evaluation
-Evaluation method, statistics, ...
+
 
 #### Conclusion
-Succinct summary
+
 
 #### Notes
 

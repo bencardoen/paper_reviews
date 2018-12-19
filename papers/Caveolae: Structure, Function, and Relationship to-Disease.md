@@ -54,7 +54,6 @@ Covers state of art in Caveolae
 * Cav1/cavin1 protects against damage (knocked down leads to necrosis of muscle cells)
 * Cav1 knockdown leads to cholesterol accumulation in mitochondria, leading to disfunctional mt
 * Cav1 prevents insulin resistance
-* 
 
 #### Related Work
 
