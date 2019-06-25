@@ -38,25 +38,38 @@ year = {2012}
 ```
 ## Content
 #### Research Question
-What problem does the paper address?
+- Colocalization of 2 signalling proteins in rat heart muscle
 
 #### Contribution
 Summarized contribution(s)
 
 #### Method
-Describe succinct the method proposed
+-Colocalization is lower in SR than it is in confocal
+-adding a 30nm band increases overlap
+-this is a result from using SR to expect overlap (where physically it cannot exit)
+-distance maps of cluster to cluster
+-distance histogram w.r.t. nearest cluster (2D)
+-compare angular alignment of clusters
+ - if 2 clusters overlap, compare angular alignment, do this for all pairs
+ - then compare with randomly (not overlapping) clusters
+###### Analysis technique details
+- location binned in 5nm pixel grid --> event data to density map using Visualization of Localization Microscopy Data (Delaunay)
+- use a 30nm band reflective of the resolution of the system as determining the precision
+- binarize density by connecting everything within 30nm (precision (assumed))
+- distances in cluster are negative, outside are positive
+- Mander's coefficient for fractional overlap
+- Rotational alignment (find the rotation needed for alignment, then compare with random)
+- Showed the expected correlation is +- .7 in identical structure case, not 1
 
 #### Related Work
-Place work in field
 
 #### Data
-Describe dataset (for reviews, covered literature)
+2D SMLM of protein receptors labelled with dual color, 2-stage antibody
 
 #### Evaluation
-Evaluation method, statistics, ...
 
 #### Conclusion
-Succinct summary
+Colocalization by cluster distance analysis with a uncertainty boundary
 
 #### Notes
 
