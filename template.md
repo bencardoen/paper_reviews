@@ -4,23 +4,14 @@
 ##### Url
 
 ##### Type
-review, (novel) method, (new) dataset, analysis, ... 
+method
 
 ##### Domain
-Single line of domains separated by comma.
+Biology
 
-E.g. Biology, CS, Mathematics, ...
+##### Keywords
+smlm, double labelling analysis
 
-##### Keywords 
-key1, key2, key3, ...
-
-A single line of comma separated keywords. These are machine parsed to create a keyword tree where a paper is placed into folders named by their keyword.
-A single paper can appear in multiple folders (never copied, only the symbolic link will appear.)
-
-Example:
-__computer graphics, networks, graph analysis__
-
- 
 
 
 ##### Cite
