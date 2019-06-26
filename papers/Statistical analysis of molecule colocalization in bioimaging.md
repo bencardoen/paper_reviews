@@ -55,7 +55,7 @@ Overview of statistical analysis methods in SMLM
   - intensity correlation quotient as alternative
   - http://www.jneurosci.org/content/24/16/4070#sec-2
   - P[ICQ>0] = 0.5 test only works when random signal is symmetric (which it isn't) with low intensity signal
-SRM forces away from pixel based methods
+###### SRM forces away from pixel based methods to object based methods
 - SRM Marked Point Process (mark = color)
   - described by 2nd order characteristics
     - distance to nearest neighbour
@@ -68,6 +68,9 @@ SRM forces away from pixel based methods
       - Ripleys and NN need multiscale (which r?)
       - Chi Square with Ripleys
     - Gibbs process modelling
+  - Tomas process
+    - spatial distribution of parent points with Gaussian offspring
+- all methods are parametric making them brittle or expensive
 
 
 #### Related Work
@@ -78,9 +81,13 @@ Synthetic Gaussian with noise filtered by wavelet filter.
 
 #### Evaluation
 
+- noise and shift (abberration) leads to underestimation of all methods (Pearson, Manders, ICCS)
+- p values only significant at 6% coloc and higher
+- Manders can be biased (increased FP) by high density
+
 
 #### Conclusion
-
+Limited statistical models for k-channel interaction in SRM with a need for nonparametric models and methods. Object methods outperform pixel based methods significantly, pixel methods can work if intensity is linear function of density (SRM), NN and Ripley require MC simulations to verify covariance, all methods are parametric hence a call for nonparametric methods. Colocalization distance is very sensitive to noise, and accurate only for higher (>20% colocalization percentages)
 
 #### Notes
 
