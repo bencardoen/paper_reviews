@@ -98,7 +98,7 @@ correlations in the positions of the participating objects.
 
 
 #### Data
-Describe dataset (for reviews, covered literature)
+Synthetic (uniform shapes) in confocal 3D with real viral data
 
 #### Evaluation
 Evaluation method, statistics, ...
