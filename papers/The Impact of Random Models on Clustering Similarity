@@ -1,0 +1,74 @@
+## Title
+The Impact of Random Models on Clustering Similarity
+### MetaData
+##### Url
+
+##### Type
+method
+
+##### Domain
+CS
+
+##### Keywords
+smlm, double labelling analysis
+
+
+
+##### Cite
+e.g. BibLatex
+```LaTex
+@article{Gates2017,
+abstract = {Clustering is a central approach for unsupervised learning. After clustering is applied, the most fundamental analysis is to quantitatively compare clusterings. Such comparisons are crucial for the evaluation of clustering methods as well as other tasks such as consensus clustering. It is often argued that, in order to establish a baseline, clustering similarity should be assessed in the context of a random ensemble of clusterings. The prevailing assumption for the random clustering ensemble is the permutation model in which the number and sizes of clusters are fixed. However, this assumption does not necessarily hold in practice; for example, multiple runs of K-means clustering returns clusterings with a fixed number of clusters, while the cluster size distribution varies greatly. Here, we derive corrected variants of two clustering similarity measures (the Rand index and Mutual Information) in the context of two random clustering ensembles in which the number and sizes of clusters vary. In addition, we study the impact of one-sided comparisons in the scenario with a reference clustering. The consequences of different random models are illustrated using synthetic examples, handwriting recognition, and gene expression data. We demonstrate that the choice of random model can have a drastic impact on the ranking of similar clustering pairs, and the evaluation of a clustering method with respect to a random baseline; thus, the choice of random clustering model should be carefully justified.},
+archivePrefix = {arXiv},
+arxivId = {1701.06508},
+author = {Gates, Alexander J and Ahn, Yong-Yeol},
+eprint = {1701.06508},
+file = {:home/bcardoen/Downloads/17-039.pdf:pdf},
+keywords = {adjustment for chance,clustering comparison,clustering evaluation,index,normalized mutual information,rand},
+mendeley-groups = {Machine learning,SRM},
+pages = {1--28},
+title = {{The Impact of Random Models on Clustering Similarity}},
+url = {http://arxiv.org/abs/1701.06508},
+volume = {18},
+year = {2017}
+}
+
+
+```
+## Content
+#### Research Question
+Unsupervised clustering metrics with random controls. Rand index and normalized mutual information don't use full range of [0,1] in practice
+
+#### Contribution
+Updated/revised metrics for random controls in unsupervised clustering, specifically NMI and RI
+
+#### Method
+##### Prelude
+- Compare with random gives 0 = random, 1 = identical, -1 is distinct from random.
+- How random is critical, too like model will destroy results, too random guarantees FP
+- MPerm, the permutation model,
+- Our results demonstrate that both the choice of random model for clusterings and the choice of one-sided comparisons can affect results significantly. There-fore, we argue that clustering comparisons should be accompanied by a proper justification for the random model.
+Adjusted Rand Index for m_all
+- $$ E_all[RI(A,B)]  = a^2 - (1-a^2) with a = log N / N$$
+#### Related Work
+
+
+#### Data
+Synthetic (MNIST) and gene expression data
+
+#### Evaluation
+
+
+#### Conclusion
+- 1(to reference) or 2 sides?
+- use package clusim
+- MI is dependent on normalization term
+- Counterintuitively instead, both MI and Rand are dominated by the fact that the expected number of clusters and cluster size distribution are converging with increasing N (Mansour, 2012).
+- (s - E_m[RI|MI])/smax - E_m
+- one-sided RI|MI(A, Ref)
+- two-sided MI(A,B)
+
+
+#### Notes
+
+#### Extra References
