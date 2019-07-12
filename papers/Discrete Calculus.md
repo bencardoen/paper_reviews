@@ -108,6 +108,11 @@ Why Manifold learning
 - Data discovery (insight into data distribution)
 - Classify on lower space
 - Interpolation between objects
+
+- Divergence
+  - Sum of in/out coming edge flows
+- Curl
+  - Flow along cycles
 #### Related Work
 Place work in field
 
